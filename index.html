@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <title>IVENTINA</title>
+  <style>
+ #loader img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: girar 2s linear infinite;
+  }
+
+  @keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(356deg); }
+  }
+    /* Loader pantalla completa */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    #loader img {
+      width: 64px; /* Podés cambiar el tamaño */
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    #loader-text {
+      color: #f1c40f;
+      font-family: sans-serif;
+      font-size: 1.2em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <img src="rueda.png" alt="Iventina">
+    <div id="loader-text"></div>
+  </div>
+
+  <!-- CONTENIDO DE TU PÁGINA -->
+  <div id="contenido" style="display: none;">
+    <!-- Acá va tu web -->
+  </div>
+
+  <script>
+    // Espera que todo se cargue
+    window.addEventListener('load', function () {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('contenido').style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="IVENTINA - GTA V en versión Argentina. Realismo total, voces reales, autos locales y multijugador pronto.">
   <meta property="og:title" content="IVENTINA - GTA V versión Argentina" />
   <meta property="og:description" content="Un mod de GTA V ambientado en Argentina. Voces reales, autos locales, realismo y pronto multijugador." />
   <meta property="og:image" content="https://tu-usuario.github.io/nombre-del-repo/logo.png" />
   <meta property="og:url" content="https://tu-usuario.github.io/nombre-del-repo/" />
-
 
   <meta charset="UTF-8">
   <title> ZENFAS</title>
@@ -121,9 +190,10 @@
 
 
 <body>
+
 <a href="#top" style="position: fixed; bottom: 20px; right: 20px; background: #f1c40f; color: black; padding: 10px 15px; border-radius: 50%; text-decoration: none; font-weight: bold;">↑</a>
   <header>
-<video autoplay muted loop playsinline style="width: 720px; margin: 30px auto; display: block;border-radius: 12px; box-shadow: 0 0 25px rgba(241, 196, 15, 0.4);">
+<video autoplay muted loop playsinline style="width: 100%; max-width: 520px; border-radius: 12px; box-shadow: 0 0 25px rgba(241, 196, 15, 0.4);">
   <source src="INTRO – INVENTINA 2025.mp4" type="video/mp4">
   Tu navegador no soporta el video.
 </video>
@@ -138,12 +208,18 @@
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <div class="container" id="iventina">
-    <h2>IVENTINA</h2>
-    <p>Una versión argentina de GTA V al mundo argentino. voces reales, autos locales, texturas únicas, y realismo como nunca viste donde la calle, el barrio y la cultura local se sienten reales.
-Inspirado en la vida cotidiana, el caos, la nostalgia y el instinto de supervivencia de cada esquina del país.
-Este es solo el comienzo.
-En este mundo hay códigos, hay historia… y hay ley.</p>
+<div class="container" id="iventina">
+  <h2>IVENTINA</h2>
+
+  <p>Es una versión argentina de GTA V: una transformación total del juego al mundo argentino, con voces reales, autos locales, texturas únicas y un nivel de realismo nunca antes visto.</p>
+
+  <p>Todo está inspirado en la calle, el barrio y la cultura, donde cada detalle transmite la vida cotidiana, el caos, la nostalgia y el instinto de supervivencia que se vive en cada esquina del país.</p>
+
+  <p>Este proyecto no es solo un mod. Cuando se lance oficialmente, vendrá como un paquete completo, con el juego ya incluido y listo para jugar. Solo tenés que instalarlo y entrar en un universo donde la ley, los códigos del barrio y la historia se entrelazan en cada paso que das.</p>
+
+  <p>Este es solo el comienzo.<br>
+  En este mundo, hay códigos. hay historia. y hay ley.</p>
+</div>
 <footer>
 <div class="container" id="novedades">
   <h2 style="color: #f1c40f;">Novedades</h2>
@@ -157,6 +233,9 @@ En este mundo hay códigos, hay historia… y hay ley.</p>
       <p style="margin-top: 8px; color: #ccc;"></p>
       <img src="7.png" alt="Gameplay de IVENTINA" style="width: 100%; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.6);">
       <p style="margin-top: 8px; color: #ccc;"></p>
+      <img src="9.png" alt="Gameplay de IVENTINA" style="width: 100%; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.6);">
+      <p style="margin-top: 8px; color: #ccc;"></p>
+
     </div>
     <div>
       <img src="4.png" alt="Gameplay de IVENTINA" style="width: 100%; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.6);">
@@ -165,10 +244,19 @@ En este mundo hay códigos, hay historia… y hay ley.</p>
       <p style="margin-top: 8px; color: #ccc;"></p>
       <img src="8.png" alt="Gameplay de IVENTINA" style="width: 100%; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.6);">
       <p style="margin-top: 8px; color: #ccc;"></p>
+      <img src="10.png" alt="Gameplay de IVENTINA" style="width: 100%; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.6);">
+      <p style="margin-top: 8px; color: #ccc;"></p>
     </div>
 
-
-
+        <section id="galeria" style="display: flex; flex-direction: column; align-items: center; padding: 30px;">
+          <h2 style="margin-bottom: 20px; font-size: 24px; color: white;">Editor Cine</h2>
+          <div style="width: 360px; height: 640px; border-radius: 12px; overflow: hidden; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+            <video controls autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+              <source src="tamochelo.mp4" type="video/mp4">
+              Tu navegador no soporta el video.
+            </video>
+          </div>
+        </section>
 
   </div>
 
@@ -207,7 +295,7 @@ En este mundo hay códigos, hay historia… y hay ley.</p>
   </div>
     
   </footer>
-
+  </div>
 
 </body>
 </html>
